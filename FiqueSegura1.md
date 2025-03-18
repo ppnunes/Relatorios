@@ -64,3 +64,15 @@ A aplicação deve oferecer funcionalidades que atendam às necessidades dos usu
 A transparência deve ser priorizada, com informações claras sobre as fontes dos dados, a metodologia de coleta e os critérios de análise.
 
 A aplicação deve assumir uma responsabilidade social e educativa. Informações de apoio, como links ou contatos de organizações que ajudam vítimas de violência, como delegacias da mulher, centros de acolhimento e serviços de assistência psicológica devem ser oferecidos.
+
+# Histórias de Usuário
+
+"Como uma executiva que está planejando se mudar para uma nova cidade por causa do trabalho, eu quero consultar a taxa de crimes de violência contra a mulher por bairro, para escolher uma área mais segura para morar e me sentir mais tranquila."
+
+"Como uma pesquisadora da área de segurança pública, eu quero filtrar os dados de violência contra a mulher por tipo de crime e localidade, para analisar as informações e elaborar relatórios que auxiliem na criação de políticas públicas."
+
+"Como uma estudante que está fazendo um trabalho acadêmico sobre violência de gênero, eu quero visualizar gráficos e mapas que mostrem a distribuição geográfica dos crimes, para embasar minha pesquisa com dados oficiais e atualizados."
+
+"Como uma mãe que deseja proteger sua filha adolescente, eu quero poder me informar sobre aumentos de crimes em minha região, para tomar medidas preventivas e orientar minha família sobre segurança."
+
+Como uma jovem mulher que gosta de viajar sozinha, quero poder buscar informações sobre violência contra a mulher nos estados e cidades que pretendo visitar a fim de preparar minhas viagens considerando a minha segurança pessoal."
