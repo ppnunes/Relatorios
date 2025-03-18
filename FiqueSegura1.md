@@ -10,7 +10,7 @@ author:
 professor: 
   name: Ranyelson Neres Carvalho
   title: Professor
-
+disciplina: Soluções Computacionais
 
 type: SPECIFICATION
 status: DRAFT
@@ -36,7 +36,6 @@ biblio-title: Referências Bibliográficas
 biblatexoptions:
   - backend=biber
   - style=numeric
-resumo: Trabalho apresentado ao Curso Superior de Tecnologia em Análise e Desenvolvimento de Software, da Escola de Educação , Tecnologia e Comunicação da Universidade Católica de Brasília, como requisito parcial da disciplina Soluções Computacionais.
 ---
 
 # Requisitos Não Funcionais
