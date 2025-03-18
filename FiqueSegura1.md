@@ -2,7 +2,7 @@
 pretitle: Pró-Reitoria Acadêmica
 title: "Curso de Tecnologia em Análise e Desenvolvimento de Sistemas
 "
-subtitle: "Fique Segura - Requisitos Não Funcionais e Regras de Negócio"
+subtitle: "Fique Segura - Requisitos Não Funcionais, Regras de Negócio e Histórias de Usuário"
 author:
   - name: Priscila Pereira Nunes
     affiliation: Universidade Católica de Brasília
