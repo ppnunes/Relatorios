@@ -69,3 +69,10 @@ install:
 	wget https://github.com/jgm/pandoc/releases/download/3.1.13/pandoc-3.1.13-1-amd64.deb && dpkg -i pandoc-3.1.13-1-amd64.deb
 	cp -v *.ttf /usr/local/share/fonts
 	fc-cache -fv
+
+install_node:
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+	nvm install 22
+	npm install --global mermaid-filter

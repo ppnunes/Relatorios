@@ -668,14 +668,18 @@ $endif$
 $if(titlepage)$
 \usepackage{pagecolor}
 \usepackage{afterpage}
-$if(titlepage-background)$
-\usepackage{tikz}
-$endif$
 $if(geometry)$
 $else$
 \usepackage[margin=2.5cm,includehead=true,includefoot=true,centering]{geometry}
 $endif$
 $endif$
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{class} = [rectangle, draw, text width=8cm, text centered, rounded corners, minimum height=2em]
+\tikzstyle{attribute} = [rectangle, draw, text width=7cm, text centered, minimum height=1em]
+\tikzstyle{method} = [rectangle, draw, text width=7cm, text centered, minimum height=1em]
+\tikzstyle{arrow} = [thick,->,>=stealth]
 
 %
 % break urls
@@ -994,7 +998,7 @@ $else$
 $if(titlepage)$
 \begin{titlepage}
 $if(titlepage-background)$
-\newgeometry{top=2cm, right=2cm, bottom=3cm, left=2cm}
+\newgeometry{top=2cm, right=2cm, bottom=2cm, left=2cm}
 $else$
 \newgeometry{left=6cm}
 $endif$
@@ -1193,7 +1197,7 @@ $endif$
 $if(biblatex)$
   \addcontentsline{toc}{section}{$biblio-title$}
   \renewcommand*{\bibfont}{\normalfont}
-  \printbibliography$if(biblio-title)$[sorting=nty,title=\Large $biblio-title$]$endif$
+  \printbibliography$if(biblio-title)$[title=\Large $biblio-title$]$endif$
 $endif$
 
 
