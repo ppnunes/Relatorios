@@ -657,6 +657,12 @@ acronym % use acronym functionality
 %%
 %% added
 %%
+% gherkin language for minted
+\usepackage{minted}
+% Opções globais para minted (sem moldura)
+\setminted{fontsize=\small, breaklines, frame=none}
+% \newminted{gherkin}{fontsize=\small, breaklines}
+\usemintedstyle{tango}
 
 $if(page-background)$
 \usepackage[pages=all]{background}
@@ -706,6 +712,7 @@ $endif$
 \definecolor{blockquote-border}{RGB}{221,221,221}
 \definecolor{blockquote-text}{RGB}{119,119,119}
 \usepackage{mdframed}
+\usepackage[most]{tcolorbox}
 \newmdenv[rightline=false,bottomline=false,topline=false,linewidth=3pt,linecolor=blockquote-border,skipabove=\parskip]{customblockquote}
 \renewenvironment{quote}{\begin{customblockquote}\list{}{\rightmargin=0em\leftmargin=0em}%
 \item\relax\color{blockquote-text}\ignorespaces}{\unskip\unskip\endlist\end{customblockquote}}

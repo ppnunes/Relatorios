@@ -37,7 +37,7 @@ all: convert
 	@echo "Using" $(NPROCS) "jobs"
 	@for file in $(TEX_FILES); do \
 	    echo "Processing $$file"; \
-	    latexmk -xelatex $$file; \
+	    latexmk -xelatex -shell-escape $$file; \
 	done
 	@for file in $(shell find . -type f -name "*.pdf"); do \
 		echo "----- $$file"; \
@@ -49,7 +49,7 @@ convert:
 	@for file in $(MD_FILES); do \
 	    echo "Converting $$file" using $(TEMPLATE); \
 	    output=$${file%.md}.tex; \
-	    pandoc --read=markdown --write=latex --output=testdoc.tex --template=$(TEMPLATE).latex $$file -o $$output --listings --biblatex --citeproc ; \
+	    pandoc --read=markdown --write=latex --output=testdoc.tex --template=$(TEMPLATE).latex $$file -o $$output --biblatex --citeproc --lua-filter=filters/minted.lua ; \
 	done
 
 $(TARGET): $(TEX_FILES) $(SOURCES)
