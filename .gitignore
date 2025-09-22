@@ -94,3 +94,4 @@ conteudo/commit_log.tex
 # temporary tex files
 *.tex
 .DS_Store
+_minted-*
