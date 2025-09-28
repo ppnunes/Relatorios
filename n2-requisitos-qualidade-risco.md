@@ -61,7 +61,12 @@ Entre os requisitos funcionais, destacam-se:
 
 Esses requisitos garantem que a aplicação seja útil para diversos perfis de usuários, desde cidadãos comuns até pesquisadores e gestores públicos.
 
-![](assets/mermaid/1.png)
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/mermaid/1.png}
+    \label{fig:1}
+\end{figure}
+
 
 # Levantamento dos Requisitos Não Funcionais
 
@@ -91,7 +96,13 @@ Principais componentes técnicos:
 - **Testes:** Pytest.
 - **Versionamento:** Git e GitHub.
 
-![](assets/mermaid/2.png)
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/mermaid/2.png}
+    \label{fig:1}
+\end{figure}
+
+
 
 # Níveis Pretendidos dos Atributos de Qualidade ISO 25010
 
@@ -135,7 +146,12 @@ A tabela a seguir resume os riscos, suas probabilidades, impactos e ações de m
 
 Riscos como exposição de dados pessoais devem ser tratados como prioridade máxima. Para cada risco, são sugeridas ações específicas visando reduzir a probabilidade ou o impacto em caso de ocorrência.
 
-![](assets/mermaid/3.png)
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/mermaid/3.png}
+    \label{fig:1}
+\end{figure}
+
 
 # Priorização dos Requisitos
 
