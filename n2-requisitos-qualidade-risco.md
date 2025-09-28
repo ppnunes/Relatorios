@@ -31,7 +31,7 @@ titlepage-background: assets/cover.pdf
 toc: true
 lof: false
 biblio-style: abntex2-alf
-# toc-own-page: true
+toc-own-page: true
 disable-header-and-footer: true
 toc-title: Sumário
 biblio-title: Referências Bibliográficas
