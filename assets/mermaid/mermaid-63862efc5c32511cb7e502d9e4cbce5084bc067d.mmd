@@ -1,0 +1,10 @@
+flowchart LR
+    RiscoSeguranca["Falha de Segurança"]
+    RiscoAtualizacao["Dados Desatualizados"]
+    RiscoDisponibilidade["Indisponibilidade"]
+    RiscoDesempenho["Lentidão"]
+
+    RiscoSeguranca -->|Prioridade 1| MitigacaoSeguranca["Revisão, HTTPS"]
+    RiscoAtualizacao -->|Prioridade 2| MitigacaoAtualizacao["Alertas, validação"]
+    RiscoDisponibilidade -->|Prioridade 3| MitigacaoDisponibilidade["Backup, redundância"]
+    RiscoDesempenho -->|Prioridade 4| MitigacaoDesempenho["Monitoramento, otimização"]

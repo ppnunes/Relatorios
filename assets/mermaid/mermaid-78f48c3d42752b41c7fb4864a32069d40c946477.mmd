@@ -1,0 +1,6 @@
+flowchart TD
+    A[Usuário acessa sistema] --> B{Seleciona filtros?}
+    B -- Sim --> C[Visualiza dados filtrados]
+    B -- Não --> D[Visualiza dados gerais]
+    C --> E[Exporta dados]
+    D --> E

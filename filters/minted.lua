@@ -17,6 +17,11 @@ function CodeBlock(cb)
     lang = cb.classes[1]
   end
 
+  -- Ignora blocos mermaid para evitar erro do minted
+  if lang == 'mermaid' then
+    return nil
+  end
+
   -- Collect minted options from attributes or set defaults
   local opts = { 'fontsize=\\small', 'breaklines' }
   if cb.attributes and cb.attributes['linenos'] == 'true' then
