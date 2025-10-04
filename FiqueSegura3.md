@@ -1,7 +1,6 @@
 ---
 pretitle: Pró-Reitoria Acadêmica
-title: "Curso de Tecnologia em Análise e Desenvolvimento de Sistemas
-"
+title: "Curso de Tecnologia em Análise e Desenvolvimento de Sistemas"
 subtitle: "Fique Segura"
 author:
   - name: Priscila Pereira Nunes
