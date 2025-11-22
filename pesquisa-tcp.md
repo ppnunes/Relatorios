@@ -77,6 +77,14 @@ Outros exemplos de serviços e aplicações que utilizam TCP:
 
 O grande diferencial do TCP está na sua capacidade de garantir a entrega dos dados com alta confiabilidade, ordem e integridade, além de oferecer mecanismos de controle de fluxo e congestionamento que preservam a estabilidade da rede. Essas características tornam o protocolo indispensável para aplicações críticas, como transações bancárias, comunicação corporativa e transferência de arquivos importantes. Por outro lado, o TCP apresenta algumas desvantagens, como o maior overhead devido ao controle de conexão e verificação de integridade, o que pode resultar em menor velocidade quando comparado a protocolos sem conexão, como o UDP. Para aplicações que exigem baixa latência e podem tolerar perdas de dados, como streaming de vídeo em tempo real ou jogos online, o UDP pode ser mais adequado, pois consome menos recursos e oferece maior rapidez.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/tcp_udp.jpeg}
+    \caption{TCP x UDP}
+    \label{fig:tcp_udp}
+\end{figure}
+
+
 # 4. Conclusão
 
 Em síntese, o protocolo TCP é fundamental para a segurança, estabilidade e eficiência na comunicação de dados digitais. Sua adoção ampla em serviços críticos da Internet se justifica pelas características técnicas que garantem confiabilidade, ordenação e controle de fluxo. Embora apresente algumas limitações em termos de velocidade e consumo de recursos, o TCP permanece como a melhor opção para aplicações em que a integridade e a ordem dos dados são essenciais, consolidando-se como um dos protocolos mais importantes do universo das redes de computadores.
