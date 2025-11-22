@@ -61,7 +61,7 @@ $(TARGET): $(TEX_FILES) $(SOURCES)
 clean:
 	rm -rf *~ *.dvi *.ps *.backup *.aux *.log *.out *.xdv *.fls *.fdb_latexmk
 	rm -f *.lof *.lot *.bbl *.blg *.brf *.toc *.idx *.lol *.bcf *.xml
-	rm -rf *.acn *.acr *.alg *.glg *.glo *.gls *.ist
+	rm -rf *.acn *.acr *.alg *.glg *.glo *.gls *.ist _minted-*
 
 install:
 	# echo deb http://br.archive.ubuntu.com/ubuntu/ jammy multiverse > /etc/apt/sources.list

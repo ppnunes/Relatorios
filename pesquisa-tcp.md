@@ -1,19 +1,18 @@
 ---
 pretitle: Pró-Reitoria Acadêmica
-title: "Curso de Tecnologia em Análise e Desenvolvimento de Sistemas
-"
+title: "Curso de Tecnologia em Análise e Desenvolvimento de Sistemas"
 subtitle: "Pesquisa: Serviços que utilizam o Protocolo TCP"
 author:
-  - name: Priscila Pereira Nunes
+  - name: Priscila Pereira Nunes - UC24101571
     affiliation: Universidade Católica de Brasília
     location: Brasília, Brazil
-  - name: Luis Gustavo Fernandes
+  - name: Luis Gustavo Fernandes - UC24101537
     affiliation: Universidade Católica de Brasília
     location: Brasília, Brazil
 professor: 
-  name: Zoe Roberto Magalhaes Junior
+  name: Francisco Javier De Obaldía Díaz
   title: Professor
-disciplina: Teste de Software
+disciplina: Redes de Computadores
 pdfsubject: Serviços que utilizam o Protocolo TCP
 keywords: 
     - Markdown
