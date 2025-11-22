@@ -1,4 +1,3 @@
-
 BIBTEX = bibtex
 # LATEX = pdflatex
 LATEX = xelatex
@@ -35,9 +34,11 @@ MD_FILES := $(shell find . -type f -name "*.md" | grep -v "README.md")
 
 all: convert
 	@echo "Using" $(NPROCS) "jobs"
-	@for file in $(TEX_FILES); do \
+	@mkdir -p /home/tmp
+	@export TMPDIR=/home/tmp; \
+	for file in $(TEX_FILES); do \
 	    echo "Processing $$file"; \
-	    latexmk -xelatex -shell-escape $$file; \
+	    TMPDIR=/home/tmp latexmk -xelatex -shell-escape $$file; \
 	done
 	@for file in $(shell find . -type f -name "*.pdf"); do \
 		echo "----- $$file"; \
@@ -54,18 +55,20 @@ convert:
 
 $(TARGET): $(TEX_FILES) $(SOURCES)
 	$(MAKE) clean
-	$(LATEX) $(TEX_FILES)
-	$(LATEX) -interaction=batchmode $(TEX_FILES)
+	TMPDIR=/home/tmp $(LATEX) -shell-escape $(TEX_FILES)
+	TMPDIR=/home/tmp $(LATEX) -shell-escape -interaction=batchmode $(TEX_FILES)
 	@mv $(PDF_FILE) $(TARGET)
 
 clean:
 	rm -rf *~ *.dvi *.ps *.backup *.aux *.log *.out *.xdv *.fls *.fdb_latexmk
 	rm -f *.lof *.lot *.bbl *.blg *.brf *.toc *.idx *.lol *.bcf *.xml
 	rm -rf *.acn *.acr *.alg *.glg *.glo *.gls *.ist _minted-*
+	rm -rf /home/tmp/*
 
 install:
-	# echo deb http://br.archive.ubuntu.com/ubuntu/ jammy multiverse > /etc/apt/sources.list
-	# apt update -qq
-	wget https://github.com/jgm/pandoc/releases/download/3.1.13/pandoc-3.1.13-1-amd64.deb && dpkg -i pandoc-3.1.13-1-amd64.deb
+	@if [ ! -f pandoc-3.1.13-1-amd64.deb ]; then \
+		wget https://github.com/jgm/pandoc/releases/download/3.1.13/pandoc-3.1.13-1-amd64.deb; \
+	fi
+	@dpkg -i pandoc-3.1.13-1-amd64.deb
 	cp -v *.ttf /usr/local/share/fonts
 	fc-cache -fv
