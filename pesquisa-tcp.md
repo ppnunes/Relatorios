@@ -34,7 +34,7 @@ titlepage-background: assets/cover.pdf
 toc: true
 lof: false
 biblio-style: abntex2-alf
-# toc-own-page: true
+toc-own-page: true
 disable-header-and-footer: true
 toc-title: Sumário
 biblio-title: Referências Bibliográficas
@@ -46,7 +46,11 @@ biblatexoptions:
 
 # 1. Breve Resumo do Tema
 
-O protocolo TCP (Transmission Control Protocol) é um dos pilares da camada de transporte do modelo TCP/IP, sendo amplamente utilizado para garantir uma comunicação confiável entre computadores em redes locais e, principalmente, na Internet. Sua principal função é assegurar que os dados transmitidos cheguem ao destino de forma íntegra e ordenada, tornando-se indispensável para aplicações em que a perda ou desordem das informações não pode ser tolerada. O TCP realiza o controle de conexão, verifica a integridade dos dados e gerencia o fluxo de informações, o que o torna essencial para serviços críticos e aplicações sensíveis.
+O protocolo TCP (Transmission Control Protocol) é um dos pilares da camada de transporte do modelo TCP/IP, amplamente utilizado para garantir comunicação confiável entre computadores em redes locais e, principalmente, na Internet. Sua principal função é assegurar que os dados transmitidos cheguem ao destino de forma íntegra e ordenada, sendo indispensável para aplicações em que a perda ou desordem das informações não pode ser tolerada. O TCP realiza o controle de conexão, verifica a integridade dos dados e gerencia o fluxo de informações, tornando-se essencial para serviços críticos e aplicações sensíveis.
+
+# 1.1. Breve História do TCP
+
+O protocolo TCP foi desenvolvido na década de 1970 por Vint Cerf e Bob Kahn, como parte do projeto ARPANET, precursor da Internet. A primeira especificação do TCP foi publicada em 1974, e o protocolo passou por diversas revisões até ser padronizado em 1981, junto com o IP, formando o conjunto TCP/IP. Desde então, o TCP tornou-se o principal protocolo de transporte para aplicações que exigem confiabilidade, sendo adotado mundialmente em redes públicas e privadas.
 
 # 2. Características Técnicas
 
@@ -54,7 +58,20 @@ O TCP se destaca por ser um protocolo orientado à conexão, estabelecendo uma c
 
 # 3. Aplicação
 
-A robustez e confiabilidade do TCP fazem com que ele seja a escolha natural para diversos serviços essenciais. A navegação na web, por exemplo, depende do HTTP e do HTTPS, que utilizam TCP para garantir que as páginas sejam carregadas corretamente e sem erros. Protocolos de transferência de arquivos, como o FTP, também se beneficiam da integridade proporcionada pelo TCP, assim como os serviços de e-mail, que utilizam SMTP, POP3 e IMAP para garantir que as mensagens sejam enviadas e recebidas sem perdas. A administração remota de servidores, realizada por meio do SSH, depende da segurança e estabilidade do TCP, enquanto o Telnet, embora menos utilizado atualmente, também faz uso desse protocolo para acesso remoto. Bancos de dados, como MySQL, PostgreSQL e SQL Server, utilizam TCP para garantir que as transações sejam entregues corretamente, mantendo a consistência das informações. Outros exemplos incluem o DNS, que em situações específicas utiliza TCP para transferências de zona, o SCP para cópia segura de arquivos, o RDP para acesso remoto a desktops e ferramentas como navegadores, clientes de e-mail, aplicativos de backup e sistemas de gerenciamento de banco de dados, todos baseados na confiabilidade do TCP.
+A confiabilidade do TCP fazem dele a escolha natural para diversos serviços essenciais. A navegação na web, por exemplo, depende do HTTP e do HTTPS, que utilizam TCP para garantir que as páginas sejam carregadas corretamente e sem erros. Protocolos de transferência de arquivos, como o FTP, também se beneficiam da integridade proporcionada pelo TCP, assim como os serviços de e-mail, que utilizam SMTP, POP3 e IMAP para garantir que as mensagens sejam enviadas e recebidas sem perdas. A administração remota de servidores, realizada por meio do SSH, depende da segurança e estabilidade do TCP, enquanto o Telnet, embora menos utilizado atualmente, também faz uso desse protocolo para acesso remoto. Bancos de dados, como MySQL, PostgreSQL e SQL Server, utilizam TCP para garantir que as transações sejam entregues corretamente, mantendo a consistência das informações.
+
+Outros exemplos de serviços e aplicações que utilizam TCP:
+
+- **DNS**: Utiliza TCP para transferências de zona e consultas que excedem o tamanho do pacote UDP.
+- **SCP e SFTP**: Para cópia segura de arquivos.
+- **RDP**: Protocolo de acesso remoto a desktops Windows.
+- **SMB/CIFS**: Compartilhamento de arquivos em redes Windows.
+- **IRC**: Comunicação em tempo real via chat.
+- **MSSQL, Oracle, MongoDB**: Bancos de dados que utilizam TCP para garantir integridade nas transações.
+- **VPNs (OpenVPN, SSTP)**: Utilizam TCP para tunelamento seguro de dados.
+- **Aplicativos de backup e sincronização**: Dropbox, Google Drive, OneDrive, entre outros, utilizam TCP para garantir que os arquivos sejam transferidos sem perdas.
+- **Ferramentas de monitoramento**: Nagios, Zabbix e Prometheus usam TCP para comunicação entre agentes e servidores.
+- **Serviços de streaming sob demanda**: Netflix, Spotify e YouTube podem utilizar TCP para garantir entrega de dados em situações específicas, como downloads ou buffer.
 
 ## 3.1. Vantagens e Desvantagens do TCP
 
