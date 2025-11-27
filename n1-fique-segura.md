@@ -2,7 +2,7 @@
 pretitle: Pró-Reitoria Acadêmica
 title: "Curso de Tecnologia em Análise e Desenvolvimento de Sistemas
 "
-subtitle: "AT1 N1"
+subtitle: "Relatório Final Fique Segura"
 author:
   - name: Priscila Pereira Nunes
     affiliation: Universidade Católica de Brasília
@@ -469,7 +469,6 @@ Com até 2000 usuários virtuais, a taxa de resposta das requisições foi de 10
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{assets/carga1.png}
-    \caption{Resultado teste de carga utilizando k6}
 \end{figure}
 
 \begin{figure}[h]
@@ -483,14 +482,12 @@ Com até 2000 usuários virtuais, a taxa de resposta das requisições foi de 10
 ```javascript
 export let options = {
   stages: [
-    { duration: '1m', target: 100 },     // aquecimento: 100 VUs
-    { duration: '5m', target: 5000 },    // carga principal: 5000 VUs
+    { duration: '1m', target: 100 }, 
+    { duration: '5m', target: 5000 }, 
   ],
 
   thresholds: {
-    // 95% das requisições deve estar abaixo de 1500ms
     http_req_duration: ['p(95)<1500', 'p(99)<2000'],
-    // taxa de requisições com falha (status >= 400) abaixo de 10%
     'http_req_failed': ['rate<0.1'],
   },
 };
@@ -505,13 +502,13 @@ Configurações para que o teste avalie o desempenho da aplicação sob picos de
 **Resultado:**
 
 
+O teste quebra quando atinge aproximadamente 2500 usuários virtuais, evidenciando limite de quantidade de usuários por instância da aplicação.
 
 **Evidência:**
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{assets/stress1.png}
-    \caption{Resultado teste de estresse utilizando k6}
 \end{figure}
 
 \begin{figure}[h]
@@ -526,9 +523,9 @@ A abertura de registro de corrências de bugs e defeitos, acompanhamento e fecha
 
 ### 12.1 Relatório de fechamento de defeito
 
-**Versão de software em que defeito foi detectado:** Commit 6ef641c.
+**Versão de software em que defeito foi detectado:** [Commit 6ef641c](https://github.com/ppnunes/FiqueSegura/pull/2/commits/6ef641c1d678bdcfe7a754260aa2a7f7f22c6668).
 
-**Descrição:** Falha em teste automatizado observado a partir do commit 6ef641c.
+**Descrição:** Falha em teste automatizado observado a partir do commit 6ef641c e rastreado pela [Issue #3](https://github.com/ppnunes/FiqueSegura/issues/3).
 
 **Teste em que o defeito foi encontrado:** test_sobre_app executado pelo CI.
 
@@ -543,7 +540,7 @@ A abertura de registro de corrências de bugs e defeitos, acompanhamento e fecha
 
 **Análise de causa raiz:** Via log do Github Actions, no traceback do pytest, foi possível identificar falha no teste test_sobre_app  e verificar a quebra por falta de dependência (função init_page não definida).
 
-**Ação corretiva:** Adição de dependência em views/Sobre.py.
+**Ação corretiva:** Adição de dependência em `views/Sobre.py`.
 
 **Ação preventiva:** Executar testes localmente e garantir que toda mudança significativa tenha cobertura de testes.
 
@@ -559,7 +556,7 @@ A abertura de registro de corrências de bugs e defeitos, acompanhamento e fecha
 **Data de correção:** 20/11/2025 15:51
 
 
-## Oportunidades de Melhorias
+## 13. Oportunidades de Melhorias
 
 Aumentar a cobertura de testes, incluindo testes unitários para todas as funções nos módulos `/utils`, `/views`e `main.py`;
 
