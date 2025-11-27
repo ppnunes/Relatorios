@@ -224,14 +224,14 @@ A estratégia de testes da aplicação FiqueSegura contempla testes automatizado
 
 ### Descrição dos Casos de Teste Implementados
 
-### Testes Automatizados (Pytest)
+#### Testes Automatizados (Pytest)
 
 - **test_dados.py:** Valida importação, atualização e filtragem dos dados públicos (RF1, RF2).
 - **test_home.py:** Verifica a renderização correta da página inicial e visualizações (RF3).
 - **test_sobre.py:** Testa exibição de informações institucionais e de apoio (RF4).
 - **test_utils_.py:** Garante funcionamento de funções utilitárias, incluindo anonimização e exportação (RF5, RNF2).
 
-### Testes de Performance (Grafana k6)
+#### Testes de Performance (Grafana k6)
 
 - **k6_fiquesegura_load_test.js:** Simula carga de até 2000 usuários, medindo tempo de resposta e taxa de erro (RNF3, RNF6).
 - **k6_fiquesegura_stress_ui.js:** Avalia comportamento sob picos de uso, verificando latência e resiliência (RNF3, RNF6).
